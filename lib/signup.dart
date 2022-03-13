@@ -1,24 +1,27 @@
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatefulWidget {
-  LoginPage({Key? key}) : super(key: key);
+class SignUp extends StatelessWidget {
+  const SignUp({ Key? key }) : super(key: key);
 
-  @override
-  State<LoginPage> createState() => _LoginPageState();
-}
-
-class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
+
+    List images = [
+      "f.png",
+      "g.png",
+      "t.png",
+    ];
+
     double w = MediaQuery.of(context).size.width;
     double h = MediaQuery.of(context).size.height;
+
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
             Container(
               width: w,
-              height: h * 0.2,
+              height: h * 0.3,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
@@ -35,20 +38,6 @@ class _LoginPageState extends State<LoginPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    "Grand",
-                    style: TextStyle(
-                      fontSize: 70,
-                      fontWeight: FontWeight.bold
-                    ),
-                  ),
-                  Text(
-                    "Entertainment",
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold
-                    ),
-                  ),
                   SizedBox(height: 50,),
                   Container(
                     decoration: BoxDecoration(
@@ -65,6 +54,11 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     child: TextField(
                       decoration: InputDecoration(
+                        hintText: "Enter Email",
+                        prefixIcon: Icon(
+                          Icons.person,
+                          color: Colors.blue,
+                          ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(30),
                           borderSide: BorderSide(
@@ -101,6 +95,11 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     child: TextField(
                       decoration: InputDecoration(
+                        hintText: "Enter Password",
+                        prefixIcon: Icon(
+                          Icons.password,
+                          color: Colors.blue,
+                          ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(30),
                           borderSide: BorderSide(
@@ -127,14 +126,6 @@ class _LoginPageState extends State<LoginPage> {
                       Expanded(
                         child: Container(),
                         ),
-                        Text(
-                    "forgot your password?",
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.grey[500]
-                    ),
-                  ),
                     ],
                   ),
                 ],
@@ -157,7 +148,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
               child: Center(
                 child: Text(
-                  "Sign In",
+                  "Sign Up",
                   style: TextStyle(
                     fontSize: 32,
                     fontWeight: FontWeight.bold,
@@ -168,21 +159,23 @@ class _LoginPageState extends State<LoginPage> {
             ),
             SizedBox(height: w*0.2,),
             RichText(text: TextSpan(
-              text: "Don\'t have an account? ",
+              text: "Signup with any of the following!",
               style: TextStyle(
                 color: Colors.grey,
-                fontSize: 20,
+                fontSize: 16,
               ),
-              children: [
-                TextSpan(
-              text: "Create",
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 20,
-              ),
-                ),
-              ],
             ),
+            ),
+            Wrap(
+              children: List<Widget>.generate(3,
+               (index) => 
+               CircleAvatar(
+                 radius: 30,
+                 backgroundImage: AssetImage(
+                   "image"+images[index]
+                 ),
+               ),
+               ),
             ),
           ],
         ),
