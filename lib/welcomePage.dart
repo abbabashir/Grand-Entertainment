@@ -1,16 +1,10 @@
 import 'package:flutter/material.dart';
 
-class SignUp extends StatelessWidget {
-  const SignUp({ Key? key }) : super(key: key);
+class WelcomePage extends StatelessWidget {
+  const WelcomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-
-    List images = [
-      "f.png",
-      "g.png",
-      "t.png",
-    ];
 
     double w = MediaQuery.of(context).size.width;
     double h = MediaQuery.of(context).size.height;
@@ -39,46 +33,6 @@ class SignUp extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(height: 50,),
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(30),
-                      boxShadow: [
-                        BoxShadow(
-                          blurRadius: 10,
-                          spreadRadius: 5,
-                          offset: Offset(1, 1),
-                          color: Colors.black.withOpacity(0.3)
-                        )
-                      ]
-                    ),
-                    child: TextField(
-                      decoration: InputDecoration(
-                        hintText: "Enter Email",
-                        prefixIcon: Icon(
-                          Icons.person,
-                          color: Colors.blue,
-                          ),
-                        focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(30),
-                          borderSide: BorderSide(
-                            color: Colors.white,
-                            width: 1.0,
-                          ),
-                        ),
-                        enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(30),
-                          borderSide: BorderSide(
-                            color: Colors.white,
-                            width: 1.0,
-                          ),
-                        ),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(30)
-                        ),
-                      ),
-                    ),
-                  ),
                   SizedBox(height: 20,),
                   Container(
                     decoration: BoxDecoration(
@@ -165,24 +119,6 @@ class SignUp extends StatelessWidget {
                 fontSize: 16,
               ),
             ),
-            ),
-            Wrap(
-              children: List<Widget>.generate(3,
-               (index) => 
-               Padding(
-                 padding: const EdgeInsets.all(8.0),
-                 child: CircleAvatar(
-                   radius: 30,
-                   backgroundColor: Colors.grey,
-                   child: CircleAvatar(
-                     radius: 25,
-                     backgroundImage: AssetImage(
-                       "assets/"+images[index]
-                     ),
-                   ),
-                 ),
-               ),
-               ),
             ),
           ],
         ),
