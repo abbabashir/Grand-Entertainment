@@ -10,6 +10,7 @@ class WelcomePage extends StatelessWidget {
     double h = MediaQuery.of(context).size.height;
 
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -25,69 +26,31 @@ class WelcomePage extends StatelessWidget {
                 ),
               ),
             ),
-           
-            Container(
-              margin: const EdgeInsets.only(left: 20, right: 20),
-              width: w,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SizedBox(height: 50,),
-                  SizedBox(height: 20,),
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(30),
-                      boxShadow: [
-                        BoxShadow(
-                          blurRadius: 10,
-                          spreadRadius: 5,
-                          offset: Offset(1, 1),
-                          color: Colors.black.withOpacity(0.3)
-                        )
-                      ]
-                    ),
-                    child: TextField(
-                      decoration: InputDecoration(
-                        hintText: "Enter Password",
-                        prefixIcon: Icon(
-                          Icons.password,
-                          color: Colors.blue,
-                          ),
-                        focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(30),
-                          borderSide: BorderSide(
-                            color: Colors.white,
-                            width: 1.0,
-                          ),
-                        ),
-                        enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(30),
-                          borderSide: BorderSide(
-                            color: Colors.white,
-                            width: 1.0,
-                          ),
-                        ),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(30)
-                        ),
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 20,),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: Container(),
-                        ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
             SizedBox(
               height: 20,
             ),
+            Container(
+              width: w,
+              margin: EdgeInsets.only(left: 16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text("Welcome there",
+              style: TextStyle(
+                fontSize: 36,
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+              ),),
+              Text("sample@example.com",
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                color: Colors.grey,
+              ),),
+                ],
+              ),
+            ),
+            SizedBox(height: 100,),
             Container(
               width: w*0.5,
               height: h *0.08,
@@ -102,7 +65,7 @@ class WelcomePage extends StatelessWidget {
               ),
               child: Center(
                 child: Text(
-                  "Sign Up",
+                  "Sign Out",
                   style: TextStyle(
                     fontSize: 32,
                     fontWeight: FontWeight.bold,
@@ -110,15 +73,6 @@ class WelcomePage extends StatelessWidget {
                   ),
                 ),
               ),
-            ),
-            SizedBox(height: w*0.2,),
-            RichText(text: TextSpan(
-              text: "Signup with any of the following!",
-              style: TextStyle(
-                color: Colors.grey,
-                fontSize: 16,
-              ),
-            ),
             ),
           ],
         ),
