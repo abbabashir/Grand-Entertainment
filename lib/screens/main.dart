@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:grand_entertainment/screens/forgotpassword.dart';
+import 'package:grand_entertainment/screens/homepage.dart';
 import 'package:grand_entertainment/screens/loginPage.dart';
+import 'package:grand_entertainment/screens/payment.dart';
 import 'package:grand_entertainment/screens/signup.dart';
 import 'package:grand_entertainment/screens/welcomePage.dart';
 
@@ -13,11 +16,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Grand Entertainment',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: WelcomePage(),
+      home: PaymentPage(),
     );
   }
 }

@@ -33,6 +33,7 @@ class _LoginPageState extends State<LoginPage> {
                   Text("Login",
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
+                    fontFamily: "Monospace",
                     fontSize: 50,
                     color: Colors.blueGrey
                   ),
@@ -50,6 +51,7 @@ class _LoginPageState extends State<LoginPage> {
                   Text("Join the entertainment",
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
+                    fontFamily: "Monospace",
                     fontSize: 20,
                     color: Colors.grey
                   ),
@@ -87,17 +89,37 @@ class _LoginPageState extends State<LoginPage> {
             ),
           ),
           SizedBox(height: 20,),
-          RaisedButton(onPressed: () {}, 
-          child: Text("Login"),
-          color: Colors.amber,
-          textColor: Colors.white,
+          ButtonTheme(
+            minWidth: 300.0,
+            height: 50.0,
+            child: RaisedButton(onPressed: () {}, 
+            child: Text("Login",
+            style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontFamily: "Monospace",
+                      fontSize: 18,
+                      color: Colors.white
+                    ),
+                    ),
+            color: Colors.amber,
+            textColor: Colors.white,
+            ),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Padding(
                 padding: const EdgeInsets.only(right: 10),
-                child: TextButton(onPressed: (){}, child: Text("Sign Up?"),),
+                child: TextButton(onPressed: (){},
+                child: Text("Click to sign up?",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                      fontFamily: "Monospace",
+                      fontSize: 18,
+                      color: Colors.blue
+                ),
+                ),
+                ),
               ),
             ],
           ),
@@ -105,6 +127,7 @@ class _LoginPageState extends State<LoginPage> {
           Text("Or Signup Using Any Of The Following:",
               style: TextStyle(
                 color: Colors.grey,
+                fontFamily: "Monospace",
               ),
               ),
               SizedBox(height: 20,),

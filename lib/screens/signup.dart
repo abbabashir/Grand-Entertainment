@@ -25,10 +25,11 @@ class SignUp extends StatelessWidget {
                 children: [
                   Text("Sign Up",
                   style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 50,
-                    color: Colors.blueGrey
-                  ),
+                      fontWeight: FontWeight.bold,
+                      fontFamily: "Monospace",
+                      fontSize: 50,
+                      color: Colors.blueGrey
+                    ),
                   ),
                 ],
             ),
@@ -43,7 +44,8 @@ class SignUp extends StatelessWidget {
                   Text("Join the entertainment",
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: 20,
+                    fontFamily: "Monospace",
+                    fontSize: 16,
                     color: Colors.grey
                   ),
                   ),
@@ -86,17 +88,36 @@ class SignUp extends StatelessWidget {
             ),
           ),
           SizedBox(height: 20,),
-          RaisedButton(onPressed: () {}, 
-          child: Text("Sign Up"),
-          color: Colors.amber,
-          textColor: Colors.white,
+          ButtonTheme(
+            minWidth: 300.0,
+            height: 50.0,
+            child: RaisedButton(onPressed: () {}, 
+            child: Text("Sign Up",
+            style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontFamily: "Monospace",
+                        fontSize: 18,
+                        color: Colors.white
+                      ),
+                      ),
+            color: Colors.amber,
+            textColor: Colors.white,
+            ),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Padding(
                 padding: const EdgeInsets.only(right: 10),
-                child: TextButton(onPressed: (){}, child: Text("Sign Up?"),),
+                child: TextButton(onPressed: (){}, 
+                child: Text("Click to login!",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                      fontFamily: "Monospace",
+                      fontSize: 16,
+                      color: Colors.blue
+                ),),
+                ),
               ),
             ],
           ),
