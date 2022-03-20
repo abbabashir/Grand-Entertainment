@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "481936674753",
+    "project_id": "grand-entertainment-26a61",
+    "storage_bucket": "grand-entertainment-26a61.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:481936674753:android:5359b7fcbbbcd614b5e940",
+        "android_client_info": {
+          "package_name": "com.example.grand_entertainment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "481936674753-dg542ngkoosfrinhoqgr10tosgpha6tg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtn0PDWGaGzexM9u6vQqZu6yFUXREauuI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "481936674753-dg542ngkoosfrinhoqgr10tosgpha6tg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
